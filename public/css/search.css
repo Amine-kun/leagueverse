@@ -1,0 +1,103 @@
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #e5e6e8 ;
+	margin: 0;
+	font-family: 'Cinzel', serif;
+	overflow-x: hidden;
+}
+
+.header{
+	display: flex;
+	justify-content: center;
+	padding: 20px 0px;
+	border-bottom: 1px solid #cfa656;
+	width: 100vw;
+	box-shadow:2px -3px 15px -3px black;
+}
+.logo{
+	height: auto;
+	width: 100px;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	gap: 40px;
+	margin: 50px 0px;
+}
+.home{
+	text-decoration-line: none;
+	font-weight: bold;
+	color: #09111c;
+	border-bottom: 1px solid #09111c;
+	padding-bottom: 4px;
+	margin-bottom: 50px;
+}
+.searched{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	width: 80%;
+}
+
+.champX{
+	display: flex;
+	flex-direction: column;
+	column-gap: 5px;
+	max-width: 300px;
+}
+.champXimg{
+	height: 175px;
+	width: 300px;
+	border-radius: 12px;
+	transition: transform 400ms;
+}
+.champXimg:hover {
+    transform: scale(1.02);
+}
+.titleX{
+	font-size: 30px;
+	margin-top: 5px;
+}
+.postedby{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	margin-top: 15px;
+}
+.userp-p{
+	height: 40px;
+	width: 40px;
+	border-radius: 100px;
+	object-fit: cover;
+}
+.lore-cat {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    padding: 2px 13px;
+    margin: 15px 0px 0px 18px;
+    z-index: 4;
+}
+.global-color{
+	color:#09111c ;
+	font-weight: bold;
+	margin: 0;
+}
+.time{
+	margin: 0;
+	font-size: 12px;
+}
+.pointer{
+	cursor: pointer;
+}

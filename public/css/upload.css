@@ -1,0 +1,140 @@
+ 
+ /*#e5e6e8
+#09111c
+#cfa656*/
+
+body{
+	display: flex;
+	flex-direction: row;
+	background-color: #e5e6e8 ;
+	margin:0;
+	font-family: 'Cinzel', serif;
+	overflow-x: hidden;
+	width: 100vw;
+}
+.pointer {
+	cursor: pointer;
+}
+.upload-header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #cfa656;
+	width: 20%;
+	height: 100vh;
+}
+.back-btn{
+	text-decoration-line: none;
+	color: #09111c;
+	background-color: #cfa656;
+	padding:  15px 20px;
+	font-weight: bold;
+	border-radius: 10px;
+}
+.file-upload{
+	padding:20px 0px 0px 0px;
+	width: 30%;
+	border-radius: 12px;
+	height: 400px;
+}
+.upload-form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 25px;
+	width: 100%;
+	background-color: white;
+}
+.upload-photo-section{
+	height: 500px;
+	padding: 20px 10px 20px 10px;
+		border-radius: 12px;
+	border: 2px dashed grey;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	height: 330px;
+}
+.section-style{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.plus{
+	font-size: 100px;
+	color: grey;
+	margin: 0;
+}
+.icon{
+	height: auto;
+	width: 50px;
+}
+.img-input{
+	width: 0;
+	height: 0;
+}
+.text{
+	font-weight: bold;
+	color: grey;
+}
+.input-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.input{
+	border: none;
+	border-bottom: 2px solid grey;
+	outline: none;
+	width: 50vw;
+	height: 30px;
+	padding: 0px 5px;
+}
+.about{
+	height: 80px;
+	font-size: 15px;
+	padding-top: 10px;
+
+}
+.option{
+	width: 30%;
+}
+.submit-btn{
+	width: 30%;
+	background-color:#cfa656 ;
+	border: none;
+	padding: 10px;
+	margin-top: 15px;
+	border-radius: 10px;
+
+}
+.region{
+	font-weight: bold;
+
+}
+
+
+@media (max-width: 930px) {
+  body {
+    flex-direction: column;  
+}
+.upload-header{
+	width: 100vw;
+	height: 15%;
+	flex-direction: row;
+}
+.upload-form{
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+.file-upload{
+	width: 80%;
+}
+}

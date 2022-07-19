@@ -1,0 +1,87 @@
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #e5e6e8 ;
+	margin: 0;
+	font-family: 'Cinzel', serif;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+.header{
+	display: flex;
+	justify-content: center;
+	padding: 20px 0px;
+	border-bottom: 1px solid #cfa656;
+	width: 100vw;
+	box-shadow:2px -3px 15px -3px black;
+}
+.logo{
+	height: auto;
+	width: 100px;
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	gap: 40px;
+}
+.div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	color: #09111c;
+}
+.text1{
+	font-size: 40px;
+	font-weight: bold;
+	margin: 0;
+}
+.text2{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.input{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+		border-bottom: 2px solid #cfa656;
+}
+.email2{
+	width: 70%;
+	outline: none;
+	border: none;
+	padding: 10px 15px;
+	background-color: transparent;
+}
+.submit-icon{
+	width: 20%;
+	border: none;
+	background-color:#cfa656;
+	border-radius: 10px;
+	font-weight: bold;
+	padding: 8px 0px;
+	margin: 4px 0px;
+	cursor: pointer;
+}
+.home{
+	text-decoration-line: none;
+	font-weight: bold;
+	color: #09111c;
+	border-bottom: 1px solid #09111c;
+	padding-bottom: 4px;
+	margin-top: 50px;
+}
+.note{
+	margin: 0;
+	font-size: 15px;
+}

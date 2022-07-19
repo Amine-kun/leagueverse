@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title id="page-title"></title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/post.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+
+</head>
+<body>
+	<header class="header">
+			<div class="header-div">
+				<img src="assets/logo.png" class="logo pointer" onclick="location.href='/';">
+				<div class="header-links">
+					<a href="/" class="elems">Home</a>
+					<a href="/" class="elems">Categories</a>
+					<a href="/" class="elems">Lore</a>
+					<a href="/" class="elems">Contact us</a>
+				</div>	
+					<div class="header-btns">
+						  
+						<!-- btns -->
+						
+					</div>	
+					<div class="bar-icon pointer" onclick="sideMenuToggle()">
+						<span class="bar1 bar barx"></span>
+						<span class="bar barx2"></span>
+						<span class="bar1 bar barx1"></span>
+					</div>
+			</div>
+		</header>
+		<div class="sideMenu ">
+				<div class="userP">
+                  
+                </div>
+                <span class="split2" style="width:60px"></span>
+                <div class="side-elems">
+                	<a href="/" class="elems">Home</a>
+					<a href="/" class="elems">Categories</a>
+					<a href="/" class="elems">Lore</a>
+					<a href="/" class="elems">Contact us</a>
+					<a href="/path/upload" class="elems">Upload</a>
+                </div>
+		</div>
+	<div class="article">
+		<div class="main-article">
+			<div class="champ-into">
+				
+					<!-- bg -->
+
+			</div>
+			<div class="champ-content">
+					<div class="champ-details">
+					<!-- dtails -->
+					</div>
+							
+					<div class="related-posts">
+						<p class="text2"></p>
+							<div class="related-posts-div">
+							<!-- related champ -->
+							</div>
+					</div>
+			</div>
+		</div>
+		
+	</div>
+	<footer class="footer">
+	    		<div class="upper-footer">
+	    			<p class=" welcome-msg contact">Join us!</p>
+	    			<div class="searchField">
+						<input type="text" name="email2" placeholder="Enter your email" class="searchElem">
+						<img src="https://cdn-icons-png.flaticon.com/512/736/736212.png" class="submit-icon pointer">
+					</div>
+	    		</div>
+	    			<span class="splitX"></span>
+	    		<div class="socials">
+	    			XXX
+	    		</div>
+	    		<div class="bot-logo">
+	    			<img src="assets/logo.png" class="logo">
+	    		</div>
+	    	</footer>
+
+	
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+ 		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+		<script src="js/firebase.js"></script>
+
+
+		<script type="text/javascript" src="js/post.js"></script>
+		<script src="js/home/user.js"></script>
+		<script src="js/home/functionalities.js"></script>
+		<script src="js/home/isLoggedIn.js"></script>
+</body>
+</html>

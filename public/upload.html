@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Upload</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="/css/upload.css">
+</head>
+<body>
+		<div class="upload-header">
+			<a href="/" class="back-btn">Back</a>
+		</div>	
+
+	<div class="upload-form">
+		<label class="file-upload pointer">
+				<div class="upload-photo-section">
+					<div class="section-style">
+						<p class="plus">+</p>
+						<p class="text">Click to upload</p>
+					</div>
+				</div>
+					<input type="file" accept="image/*" name="upload-img" class="img-input image">
+		</label>
+		<div class="input-section">
+			<input type="text" name="name" class="name input" placeholder="Champion Name">
+			<input type="text" name="tag" class="title input" placeholder="Champion Title">
+			<textarea type="text" name="name" class="about input" placeholder="About"></textarea>
+			<p class="region">Select a region:</p>
+			<Select class="input option">
+				options
+			</Select>
+			<button class="submit-btn submit">Submit</button>
+		</div>
+	</div>	
+
+
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+ 		 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+		<script src="/js/firebase.js"></script>
+		<script src="/js/upload.js"></script>
+</body>
+</html>

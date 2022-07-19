@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>League Verse</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+<body>
+		<header class="header">
+			<div class="header-div">
+				<img src="assets/logo.png" class="logo pointer" onclick="location.href='/';">
+				<div class="header-links">
+					<a href="/" class="elems home" >Home</a>
+					<a href="#categories" class="elems cat" >Categories</a>
+					<a href="#lore" class="elems lore"  >Lore</a>
+					<a href="#Contact-us" class="elems contact" >Contact us</a>
+				</div>	
+					<div class="header-btns">
+						  
+						<!-- btns -->
+						
+					</div>	
+					<div class="bar-icon pointer" onclick="sideMenuToggle()">
+						<span class="bar1 bar barx"></span>
+						<span class="bar barx2"></span>
+						<span class="bar1 bar barx1"></span>
+					</div>
+			</div>
+		</header>
+		<div class="sideMenu ">
+				<div class="userP">
+                  	<!-- logged user -->
+                </div>
+                <span class="split2" style="width:60px"></span>
+                <div class="side-elems">
+                	<a href="/" class="elems home" >Home</a>
+					<a href="#categories" class="elems cat" >Categories</a>
+					<a href="#lore" class="elems lore"  >Lore</a>
+					<a href="#Contact-us" class="elems contact">Contact us</a>
+
+					<a href="/path/upload" class="elems">Upload</a>
+                </div>
+		</div>
+		<div class="content">
+			<p class="welcome ">Welcome to</p>
+			<p class="welcome-msg">LeagueVerse</p>
+			<p class="description">
+				LeagueVerse where you can find anything
+			</p>
+			<p class="description"> related to 
+				league of legends Lore</p>
+		</div>
+		<div class="searchField">
+			<input type="search" name="search" placeholder="Search by Name or by Nation" class="searchElem">
+			<a onclick="searchLocation();" class="searchBtn pointer">Search</a>
+		</div>
+		<span class="split"></span>
+
+
+		<div id="wrapper">
+			      <div id="carousel">
+			        <div id="content">
+						<!-- categories -->
+			        </div>
+			      </div>
+			      <button id="prev">
+			        <svg
+			          xmlns="http://www.w3.org/2000/svg"
+			          width="24"
+			          height="24"
+			          viewBox="0 0 24 24"
+			        >
+			          <path fill="none" d="M0 0h24v24H0V0z" />
+			          <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+			        </svg>
+			      </button>
+			      <button id="next">
+			        <svg
+			          xmlns="http://www.w3.org/2000/svg"
+			          width="24"
+			          height="24"
+			          viewBox="0 0 24 24"
+			        >
+			          <path fill="none" d="M0 0h24v24H0V0z" />
+			          <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+			        </svg>
+			      </button>
+ 		</div>
+
+    		<span class="split"></span>
+
+    		<div class="mid">
+	    		 <div class="lore-content">
+	    		 	<!-- 	lore introduction -->
+	    		 </div>	
+	    		 <div class="sub-nation-lore">
+	    		 	<div class="champs">
+	    		 		<!-- displayed lore -->
+	    		 	</div>
+	    		 </div>
+	    	</div>
+
+	    	<span class="split"></span>
+	    	<div class="conctact-form">
+	    		<div class="">
+					<p class=" welcome-msg contact">Reach us!</p>
+					<p class="description">
+						Contact us for more Runeterra's Lore!
+					</p>
+				</div>
+					<div class="cnt-inputs">
+						<input type="text" name="name" placeholder="Enter your name" class="inputElem name">
+						<input type="text" name="email" placeholder="Enter your email" class="inputElem email">
+						<textarea placeholder="Something..." class="inputElem txt-area desc"></textarea>
+					</div>
+					<button class="general-btn pointer"><p class="sbm-btn">Submit</p></button>
+	    	</div>
+	    	<footer class="footer">
+	    		<div class="upper-footer">
+	    			<p class=" welcome-msg contact">Join us!</p>
+	    			<div class="searchField">
+						<input type="text" name="email2" placeholder="Enter your email" class="searchElem email2">
+						<img src="https://cdn-icons-png.flaticon.com/512/736/736212.png" class="submit-icon pointer">
+					</div>
+	    		</div>
+	    			<span class="splitX"></span>
+	    		<div class="mid-footer">
+	    			<div class="for-cat">
+	    				<p class="fot">Categories</p>
+	    			</div>
+	    			<div>
+	    				<p class="fot">References</p>
+	    				<p class="forcat pointer">Riot Games</p>
+	    				<p class="forcat pointer">League of legends Universe</p>
+	    				<p class="forcat pointer">Runeterra</p>
+	    			</div>
+	    			
+	    		</div>
+	    			<span class="splitX"></span>
+	    		<div class="socials">
+	    			XXX
+	    		</div>
+	    		<div class="bot-logo">
+	    			<img src="assets/logo.png" class="logo">
+	    		</div>
+	    	</footer>
+
+	   	
+
+		 <script src="js/user.js"></script>	    
+		 	
+		 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+ 		 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+		<script src="js/firebase.js"></script>
+		<script src="js/home/firebaseSendData.js"></script>
+
+		<script src="js/home/onClickScroll.js"></script>
+		<script src="js/home/main.js"></script>
+		<script src="js/home/carossel.js"></script>
+		<script src="js/home/filter.js"></script>
+		<script src="js/home/isLoggedIn.js"></script>
+		<script src="js/home/functionalities.js"></script>
+
+</body>
+</html>
