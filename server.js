@@ -52,6 +52,12 @@ app.get('/path/request', (req, res)=>{
 app.get('/posts/search/*', (req, res)=>{
 	res.sendFile(path.join(initial_path, "search.html"));
 })
+	
+
+app.get('/path/upload', (req, res)=>{
+	res.sendFile(path.join(initial_path, "upload.html"));
+})
+
 
 app.post('/path/login', (req, res)=>{
 	const {email, pass} = req.body;
@@ -87,14 +93,6 @@ app.post('/path/login', (req, res)=>{
 
 })
 
-	
-
-app.get('/path/upload', (req, res)=>{
-	res.sendFile(path.join(initial_path, "upload.html"));
-})
-
-
-
 app.post('/path/upload', (req, res)=>{
 	let file = req.files.image;
 	let date = new Date();
@@ -107,6 +105,6 @@ app.post('/path/upload', (req, res)=>{
 	})
 })
 
-app.listen("3000", ()=>{
-	console.log('Listening..')	
-})
+ app.listen(process.env.PORT || 3000, ()=>{
+    console.log("server is running")
+ })
