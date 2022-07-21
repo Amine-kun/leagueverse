@@ -4,4 +4,6 @@ const userInfo = localStorage.getItem('user') !== 'undefined'
                   : localStorage.clear();
 
 
-export default userInfo;
+module.exports = {
+    userInfo: userInfo
+};
