@@ -101,7 +101,7 @@ app.post('/path/upload', (req, res)=>{
 
 
 	file.mv(url, () =>{
-			res.json(`imageHandler/${imageName}`)
+			res.json(`https://leagueverse.herokuapp.com/imageHandler/${imageName}`)
 	})
 })
 
