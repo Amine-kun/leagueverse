@@ -38,7 +38,7 @@ const uploadImage = (imagefile) => {
     const file = imagefile.files[0];
             const formdata= new FormData();
             formdata.append('image',file);
-                fetch('http://localhost:3000/path/upload',{
+                fetch('https://leagueverse.herokuapp.com/path/upload',{
                     method: 'post',
                     body: formdata
                 }).then(res=>res.json())
