@@ -1,3 +1,5 @@
+import {userInfo} from '../user.js'
+
 const isSignedBtns = document.querySelector('.header-btns'),
       sidemenu = document.querySelector('.sideMenu'),
       sideMenuUser= document.querySelector('.userP');
