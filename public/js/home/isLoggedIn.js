@@ -2,6 +2,11 @@ const isSignedBtns = document.querySelector('.header-btns'),
       sidemenu = document.querySelector('.sideMenu'),
       sideMenuUser= document.querySelector('.userP');
                   
+
+const userInfo = localStorage.getItem('user') !== 'undefined'
+                 ? JSON.parse (localStorage.getItem('user'))
+                  : localStorage.clear();
+                  
 //user isLoggedIn check
 const isLoggedIn=()=> {
     if (userInfo){ 
