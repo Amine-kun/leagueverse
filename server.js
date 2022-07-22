@@ -139,9 +139,10 @@ app.post('/path/upload', (req, res)=>{
 		                          }
 
 		                        }).then((data)=>{
+		                        	let file = data[0];
 		                        		 let imageUrl= Promise.resolve("https://firebasestorage.googleapis.com/v0/b/" + bucket.name 
                                             + "/o/" 
-                                            + encodeURIComponent(imageName) 
+                                            + encodeURIComponent(file.name)  
                                             + "?alt=media&token=" 
                                             + imgID)
 
