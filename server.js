@@ -123,9 +123,12 @@ app.post('/path/upload', (req, res)=>{
 	let date = new Date();
 	let imageName = date.getDate() + date.getTime() + file.name;
 	let url = 'public/imageHandler/' + imageName;
-	let imageUrl;
+	const imgID = uuid();
 
-			const imgID = uuid();
+
+			file.mv(url, () =>{
+					console.log("file uploaded");
+			})
 
 			bucket.upload(file.tempFilePath, {
 		                          destination:`champs/${imageName}`,
@@ -136,17 +139,17 @@ app.post('/path/upload', (req, res)=>{
 		                          }
 
 		                        }).then((data)=>{
-		                        		 imageUrl= Promise.resolve("https://firebasestorage.googleapis.com/v0/b/" + bucket.name 
+		                        		 let imageUrl= Promise.resolve("https://firebasestorage.googleapis.com/v0/b/" + bucket.name 
                                             + "/o/" 
                                             + encodeURIComponent(imageName) 
                                             + "?alt=media&token=" 
-                                            + imgID)
+                                            + imgID);
+
+		                        		 res.json(imageUrl);
+		                        		 console.log(imageUrl)
+
 		                        }).catch((err)=>
 		                        console.error('ERROR:', err));
-
-					file.mv(url, () =>{
-							res.json(imageUrl)
-					})
 				})
 
 // app.post('/path/upload', (req, res)=>{
