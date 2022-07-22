@@ -143,10 +143,9 @@ app.post('/path/upload', (req, res)=>{
                                             + "/o/" 
                                             + encodeURIComponent(imageName) 
                                             + "?alt=media&token=" 
-                                            + imgID);
+                                            + imgID)
 
-		                        		 res.json(imageUrl);
-		                        		 console.log(imageUrl)
+		                        		 .then((url)=> res.json(url))
 
 		                        }).catch((err)=>
 		                        console.error('ERROR:', err));
