@@ -21,12 +21,12 @@ const {collection, getFirestore, getDocs , query, where} = require('firebase/fir
 
 //linking to firebase
 let firebaseConfig = {
-    apiKey: "AIzaSyCWYl3gZhXwc9Dgfw-jQm2MTg77-zJDq7E",
+    apiKey: process.env.FIREBASE_APIKEY,
     authDomain: "league-verse.firebaseapp.com",
     projectId: "league-verse",
     storageBucket: "league-verse.appspot.com",
     messagingSenderId: "894553556038",
-    appId: "1:894553556038:web:4faf1e5bed3ed9ecd97647"
+    appId: process.env.APP_ID
   };
 
  // Initialize Firebase-admin-storage (for storing the uploaded imgs)
@@ -152,18 +152,6 @@ app.post('/path/upload', (req, res)=>{
 		                        console.error('ERROR:', err));
 				})
 
-// app.post('/path/upload', (req, res)=>{
-// 	let file = req.files.image;
-
-// 	let date = new Date();
-// 	let imageName = date.getDate() + date.getTime() + file.name;
-// 	let url = 'public/imageHandler/' + imageName;
-
-
-// 	file.mv(url, () =>{
-// 			res.json(`https://leagueverse.herokuapp.com/imageHandler/${imageName}`)
-// 	})
-// })
 
  app.listen(process.env.PORT || 3000, ()=>{
     console.log("server is running")
