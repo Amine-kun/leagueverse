@@ -2,8 +2,18 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser= require('body-parser');
 const path = require('path'); 
+const {uuid} = require("uuidv4");
 const fileupload = require('express-fileupload');
 const bcrypt= require('bcrypt-nodejs');
+const app = express();
+
+const admin = require('firebase-admin');
+const {cert } = require('firebase-admin/app');
+const { getStorage, ref} = require('firebase-admin/storage');
+
+const serviceAccount = require('./serviceAccountKey.json');
+
+
 
 //firebase SDK
 const {initializeApp} = require('firebase/app');
@@ -18,13 +28,24 @@ let firebaseConfig = {
     messagingSenderId: "894553556038",
     appId: "1:894553556038:web:4faf1e5bed3ed9ecd97647"
   };
+
+ // Initialize Firebase-admin-storage (for storing the uploaded imgs)
+admin.initializeApp({
+  credential: cert(serviceAccount),
+  storageBucket: 'league-verse.appspot.com/'
+});
+const firebaseStorage = getStorage();
+const bucket = firebaseStorage.bucket();
+
+
  //calling the functions
 const fire = initializeApp(firebaseConfig);
 const db= getFirestore(fire);
 
 let initial_path = path.join(__dirname, "public");
 
-const app = express();
+
+
 
 
 app.use(express.static(initial_path));
@@ -95,15 +116,48 @@ app.post('/path/login', (req, res)=>{
 
 app.post('/path/upload', (req, res)=>{
 	let file = req.files.image;
+
 	let date = new Date();
 	let imageName = date.getDate() + date.getTime() + file.name;
 	let url = 'public/imageHandler/' + imageName;
+	let imageUrl;
+
+			const imgID = uuid();
+
+			bucket.upload(url, {
+		                          destination:`champs/${imageName}`,
+		                          gzip: true,
+		                          metadata: {
+		                            cacheControl: 'public, max-age=31536000',
+		                              firebaseStorageDownloadTokens: imgID
+		                          }
+
+		                        }).then((data)=>{
+		                        		 imageUrl= Promise.resolve("https://firebasestorage.googleapis.com/v0/b/" + bucket.name 
+                                            + "/o/" 
+                                            + encodeURIComponent(imageName) 
+                                            + "?alt=media&token=" 
+                                            + imgID)
+		                        }).catch((err)=>
+		                        console.error('ERROR:', err));
+
+					file.mv(url, () =>{
+							res.json(imageUrl)
+					})
+				})
+
+// app.post('/path/upload', (req, res)=>{
+// 	let file = req.files.image;
+
+// 	let date = new Date();
+// 	let imageName = date.getDate() + date.getTime() + file.name;
+// 	let url = 'public/imageHandler/' + imageName;
 
 
-	file.mv(url, () =>{
-			res.json(`https://leagueverse.herokuapp.com/imageHandler/${imageName}`)
-	})
-})
+// 	file.mv(url, () =>{
+// 			res.json(`https://leagueverse.herokuapp.com/imageHandler/${imageName}`)
+// 	})
+// })
 
  app.listen(process.env.PORT || 3000, ()=>{
     console.log("server is running")

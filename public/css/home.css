@@ -260,14 +260,14 @@ body{
   left: 0;
   transform: translate(50%, -50%);
   display: none;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 #next {
   top: 50%;
   right: 0;
   transform: translate(-50%, -50%);
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 #content {

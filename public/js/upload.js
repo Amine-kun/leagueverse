@@ -44,7 +44,7 @@ const uploadImage = (imagefile) => {
                 }).then(res=>res.json())
                     .then((data)=>{
                         // bannerPath = `${location.origin}/${data}`;
-                        bannerPath = `imageHandler/${data}`;
+                        bannerPath = `${data}`;
                     })
 }
 
