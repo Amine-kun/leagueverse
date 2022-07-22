@@ -44,7 +44,7 @@ const uploadImage = (imagefile) => {
                 }).then(res=>res.json())
                     .then((data)=>{
                         // bannerPath = `${location.origin}/${data}`;
-                        bannerPath = `${data}`;
+                        imagePath = `${data}`;
                     })
 }
 
@@ -69,7 +69,7 @@ publish.addEventListener('click', () => {
             description: postTitle.value,
             lore: postAbout.value,
             nation:opt.value,
-            image: bannerPath,
+            image: imagePath,
             postedBy:{
                 img: userInfo.userProfile,
                 name: userInfo.userName,
