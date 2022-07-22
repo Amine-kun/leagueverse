@@ -49,7 +49,10 @@ let initial_path = path.join(__dirname, "public");
 
 
 app.use(express.static(initial_path));
-app.use(fileupload());
+app.use(fileupload({
+    useTempFiles : true,
+    tempFileDir : '/tmp/'
+}));
 app.use(cors())
 app.use(bodyParser.json());
 
@@ -124,7 +127,7 @@ app.post('/path/upload', (req, res)=>{
 
 			const imgID = uuid();
 
-			bucket.upload(url, {
+			bucket.upload(file.tempFilePath, {
 		                          destination:`champs/${imageName}`,
 		                          gzip: true,
 		                          metadata: {
