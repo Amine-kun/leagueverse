@@ -19,11 +19,3 @@ The app is consist of a :
 * An Account request section, so users can request for a featured account to join the stuff.
 * An upload section.
 
-## Setup
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
