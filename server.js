@@ -86,12 +86,16 @@ app.get('/path/upload', (req, res)=>{
 app.post('/path/login', (req, res)=>{
 	const {email, pass} = req.body;
 	const col= collection(db,'Login');
-
 	const col2= collection(db,'Users');
-	const q = query(col2, where("Email","==",email));
 
-			if (!email || !pass) 
+	//validatin the email
+	let emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+	
+	if (!email || !pass) 
 			return res.status(404).json('fields are empty');
+
+	if (emailRegex.test(email)){
+			const q = query(col2, where("Email","==",email));
 
 			getDocs(col).then((data)=> {
 				let users =[];
@@ -114,6 +118,9 @@ app.post('/path/login', (req, res)=>{
 						}
 
 			}).catch((err)=> console.log(err));
+	} else {
+		return res.status(404).json('enter a valid email form');
+	}	
 
 })
 
