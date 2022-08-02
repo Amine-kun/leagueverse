@@ -16,7 +16,7 @@ var data2 = '';
 
 const sendData = async() =>{
 			Logining.innerText="Logining...";
-			await fetch('http://localhost:3000/path/login',{
+			await fetch('https://leagueverse.herokuapp.com/path/login',{
 					method:'post',
 					headers:{'Content-Type': 'application/json'},
 					body: JSON.stringify({

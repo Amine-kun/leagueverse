@@ -38,12 +38,13 @@ const uploadImage = (imagefile) => {
     const file = imagefile.files[0];
             const formdata= new FormData();
             formdata.append('image',file);
-                fetch('http://localhost:3000/path/upload',{
+                fetch('https://leagueverse.herokuapp.com/path/upload',{
                     method: 'post',
                     body: formdata
                 }).then(res=>res.json())
                     .then((data)=>{
-                        bannerPath = `${location.origin}/${data}`;
+                        imagePath = data;
+                        console.log(data);
                     })
 }
 
@@ -68,7 +69,7 @@ publish.addEventListener('click', () => {
             description: postTitle.value,
             lore: postAbout.value,
             nation:opt.value,
-            image: bannerPath,
+            image: imagePath,
             postedBy:{
                 img: userInfo.userProfile,
                 name: userInfo.userName,
