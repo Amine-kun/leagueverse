@@ -1,6 +1,7 @@
 # leagueverse
 LEAGUEVERSE is a web application that is concerned about anything related to league of legends lore,
 it aims to deliever a good, structured and organized league of legends content for the lore lovers. where they can read about their favorite champions or nation.
+A Demo of the website : [leagueverse](https://leagueverse.herokuapp.com/)
 
 ## The tech-stack used
 This app was built using the jamstack mainly, and a nodejs back-end for user verification.
