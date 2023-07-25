@@ -1,6 +1,6 @@
 
   let firebaseConfig = {
-    apiKey: YOUR_FIREBASE_APIKEY,
+    apiKey:'AIzaSyCWYl3gZhXwc9Dgfw-jQm2MTg77-zJDq7E',
     authDomain: "league-verse.firebaseapp.com",
     projectId: "league-verse",
     storageBucket: "league-verse.appspot.com",
