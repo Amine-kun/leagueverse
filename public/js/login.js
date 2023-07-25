@@ -16,7 +16,7 @@ var data2 = '';
 
 const sendData = async() =>{
 			Logining.innerText="Logining...";
-			await fetch('https://leagueverse.herokuapp.com/path/login',{
+			await fetch('https://leagueverse-production.up.railway.app/path/login',{
 					method:'post',
 					headers:{'Content-Type': 'application/json'},
 					body: JSON.stringify({
